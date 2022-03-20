@@ -7,7 +7,7 @@
         <!--<link href="https://z3.ax1x.com/2021/07/02/R68dUK.jpg" rel="icon" type="image/jpeg">
         <link href="https://www.runoob.com/try/bootstrap/twitter-bootstrap-v2/docs/assets/css/bootstrap.css?rel=%22stylesheet%22%20type=%22text/css%22%20/%3E" rel="stylesheet" type="text/css"/>
         <link rel="icon" type="image/png" sizes="144x144" href="https://z3.ax1x.com/2021/07/02/R68dUK.jpg"/>
-        <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://z3.fax1x.com/2021/07/02/R68dUK.jpg"/>--><style>
+        <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="https://z3.ax1x.com/2021/07/02/R68dUK.jpg"/>--><style>
 @charset "utf-8";
 body{
      margin:0px;
@@ -376,14 +376,20 @@ p button{
 }
         </style>
         <p style="text-align:center">
-            <select>
+            <select id="sswz">
                 <option value="百度">百度</option>
+				<!--在开发-->
+				<option value="站内文章">站内文章</option>
             </select>
             <input type="text" placeholder="搜索一下……" id="ipt">
             <script>
 function search(){
     var value=document.getElementById("ipt")["value"]
-    window.open("http://www.baidu.com/s?wd="+value)
+    if (document.getElementById('sswz').value=='百度'){
+		window.open("http://www.baidu.com/s?wd="+value)
+	}else if (document.getElementById('sswz').value=='站内文章'){
+		window.open('https://www.yangguang-gongzuoshi.top/wry/wp/?s='+value)
+	}
 }
             </script>
             <button class="search" type="button" onclick="search();">
@@ -485,10 +491,10 @@ function opp(){
                 <!--<li><a href="wry_photos.html">个人相册</a></li>
                 这里放网站链接-->
                 <li><a href="http://yangguang-gongzuoshi.top/wry/articles.html">教程中心</a></li>
-				<li><a href="./games.html">游戏中心</a></li>
-				<li><a href="./softwares.html">软件下载站</a></li>
-				<li><a href="./tuoguan.html">网页托管（即将开放）</li>
-				<li><a href="https://yangguang-gongzuoshi.top/wry/wp">全新Wordpress文章页面</a></li>
+				<li><a href="http://yangguang-gongzuoshi.top/wry/files/games.html">游戏中心</a></li>
+				<li><a href="http://yangguang-gongzuoshi.top/wry/files/softwares.html">软件下载站</a></li>
+				<li><a href="tuoguan.html">网页托管（即将开放）</li>
+				<li><a href="../wp">全新Wordpress文章页面</a></li>
             </ul>
             <h3 class="widget-title">
                 <span>友情链接</span>
